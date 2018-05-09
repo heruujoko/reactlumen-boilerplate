@@ -27,6 +27,8 @@ mix.webpackConfig({
     }
 });
 
-mix.react('resources/js/app.js', 'public/js')
-mix.styles('resources/css/custom.css', 'public/css/custom.css')
-mix.styles('public/css/style.css', 'public/css/style.min.css')
+mix.react('resources/js/app.js', 'public/js');
+mix.styles('resources/css/custom.css', 'public/css/custom.css');
+mix.styles('public/css/style.css', 'public/css/style.min.css');
+
+mix.version();

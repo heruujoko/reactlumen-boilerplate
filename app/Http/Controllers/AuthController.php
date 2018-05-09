@@ -19,7 +19,7 @@ class AuthController extends Controller
     }
 
     public function signin(Request $request){
-      $user = User::where('nik',$request->nik)->first();
+      $user = User::where('email',$request->nik)->first();
       if($user){
         $token = JWTHelper::encode($user);
         $data = [
