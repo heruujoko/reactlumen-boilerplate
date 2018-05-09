@@ -1,4 +1,9 @@
 let mix = require('laravel-mix').mix;
+let path = require("path");
+
+
+const suffix = new Date().getTime();
+const chunkFilename = process.env.IS_WATCH ? "js/[name].js" : "js/[name].[chunkhash]" + suffix + ".js";
 
 /*
  |--------------------------------------------------------------------------
@@ -10,6 +15,17 @@ let mix = require('laravel-mix').mix;
  | file for your application, as well as bundling up your JS files.
  |
  */
+
+mix.webpackConfig({
+    resolve: {
+        modules: [path.resolve("./resources/js"), path.resolve("./node_modules")],
+        extensions: ["*", ".js", ".jsx"]
+    },
+    output: {
+        publicPath: "/",
+        chunkFilename
+    }
+});
 
 mix.react('resources/js/app.js', 'public/js')
 mix.styles('resources/css/custom.css', 'public/css/custom.css')
