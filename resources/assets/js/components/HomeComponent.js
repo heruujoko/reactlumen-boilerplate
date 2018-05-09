@@ -1,6 +1,5 @@
 
 import React, {Component} from 'react';
-import EmptyStateComponent from '../components/Shared/EmptyStateComponent'
 
 class HomeComponent extends Component {
 
@@ -18,7 +17,7 @@ class HomeComponent extends Component {
 
     render () {
         return (
-            <EmptyStateComponent location="Home page" />
+            <br/>
         );
     }
 }

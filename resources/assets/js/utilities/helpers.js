@@ -6,14 +6,14 @@ import axios from 'axios';
  * a simple convenience so we don't have to attach every token manually.
  */
 
-// let token = document.head.querySelector('meta[name="csrf-token"]');
-//
-// if (token) {
-//     axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-// } else {
-//     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-// }
-//
-// axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+let token = document.head.querySelector('meta[name="jwt-token"]');
+
+if (token) {
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://jwt.io/ OR https://laracasts.com/discuss/channels/lumen/csrf-token-in-lumen-54');
+}
+
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 export default axios;

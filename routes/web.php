@@ -11,6 +11,4 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return view('app');
-});
+$app->get('/', 'AuthController@index');

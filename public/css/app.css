@@ -9,10 +9,10 @@
   /* Likely future */
 }
 
-.logo {
+#app > div > div.ant-layout-header > div {
   width: 120px;
   height: 31px;
-  background: rgba(255, 255, 255, 0.2);
+  background: url("https://ca0cm30uzh03yhb8b41bu5n1-wpengine.netdna-ssl.com/wp-content/uploads/iHealth_Logo140x33.png");
   margin: 16px 24px 16px 0;
   float: left;
 }
