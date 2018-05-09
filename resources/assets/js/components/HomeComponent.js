@@ -13,7 +13,7 @@ class HomeComponent extends Component {
     }
 
     componentWillMount () {
-        this.props.fetchSample();
+        //this.props.fetchSample();
     }
 
     render () {

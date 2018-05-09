@@ -27,19 +27,19 @@ class HeaderMenuComponent extends Component {
 
         return (
             <Menu
-                theme="light"
+                theme="dark"
                 mode="horizontal"
                 style={{ lineHeight: '64px', float: 'right' }}
                 defaultSelectedKeys={[ this.state.defaultSelectedKeys ]}
             >
                 <Menu.Item key="1">
                     <a href={"account"}>
-                        <Icon type="wallet" /> Account
+                        <Icon type="link" /> Link 1
                     </a>
                 </Menu.Item>
                 <Menu.Item key="2">
                     <a href={"signout"}>
-                        <Icon type="logout" /> Signout
+                        <Icon type="link" /> Link 2
                     </a>
                 </Menu.Item>
             </Menu>
