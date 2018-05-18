@@ -1,37 +1,40 @@
 {
-  "name": "lumen-react",
-  "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework) [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework) [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework) [![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework) [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "author": "Heru Joko",
-  "license": "ISC",
-  "scripts": {
-    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
-  "devDependencies": {
-    "babel-preset-react": "^6.24.1",
-    "laravel-mix": "^0.10.0",
-    "webpack": "^2.3.3"
-  },
-  "dependencies": {
-    "async": "^2.3.0",
-    "axios": "^0.16.1",
-    "react": "^15.5.4",
-    "react-addons-css-transition-group": "^15.5.2",
-    "react-addons-transition-group": "^15.5.2",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.4",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
-    "reactstrap": "^4.5.0",
-    "redux": "^3.6.0",
-    "sweetalert": "^1.1.3",
-    "localStorage": "^1.0.3"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.16.2",
+        "babel-preset-react": "^6.23.0",
+        "bootstrap-sass": "^3.3.7",
+        "cross-env": "^5.0.1",
+        "jquery": "^3.1.1",
+        "laravel-mix": "^1.0",
+        "lodash": "^4.17.4",
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2",
+        "prettier-eslint": "^8.2.5"
+    },
+    "dependencies": {
+        "antd": "^3.5.1",
+        "babel-plugin-import": "^1.7.0",
+        "bootswatch": "^3.3.7",
+        "create-react-class": "^15.6.0",
+        "dotenv": "^5.0.1",
+        "google-fonts-offline": "^0.1.2",
+        "ioredis": "^3.2.2",
+        "react-redux": "^5.0.3",
+        "react-router": "3.0.4",
+        "react-spinners": "^0.3.2",
+        "redux": "^3.0.4",
+        "redux-promise": "^0.5.3",
+        "socket.io": "^2.0.4",
+        "socket.io-client": "^2.0.4"
+    }
 }

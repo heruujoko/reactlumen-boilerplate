@@ -11,13 +11,4 @@
 |
 */
 
-$app->group(['prefix' => 'api'], function() use ($app){
-  $app->post('/signin','AuthController@signin');
-});
-
-$app->get('/', function () use ($app) {
-    return view('app');
-});
-$app->get('/{id}', function () use ($app) {
-    return view('app');
-});
+$app->get('/', 'AuthController@index');
